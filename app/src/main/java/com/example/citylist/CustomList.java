@@ -12,16 +12,30 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+/**
+ * This is a class that keeps track of a list of city objects
+ */
 public class CustomList extends ArrayAdapter<City> {
 
     private ArrayList<City> cities;
     private Context context;
 
+    /**
+     * @param context This is the context
+     * @param cities This is the list of cities
+     */
     public CustomList(Context context, ArrayList<City> cities){
         super(context, 0, cities);
         this.cities = cities;
         this.context = context;
     }
+
+    /**
+     * @param position This is the position of the city
+     * @param convertView This is the view
+     * @param parent This is the parent view
+     * @return This returns the view
+     */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){

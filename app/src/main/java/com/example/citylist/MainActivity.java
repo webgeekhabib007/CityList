@@ -8,12 +8,19 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * This is the main activity of the app
+ */
 public class MainActivity extends AppCompatActivity {
 
     // Declare the variables so that you will be able to reference it later.
     ListView cityList;
     ArrayAdapter<City> cityAdapter;
     ArrayList<City> cityDataList;
+
+    /**
+     * @param savedInstanceState This is the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
